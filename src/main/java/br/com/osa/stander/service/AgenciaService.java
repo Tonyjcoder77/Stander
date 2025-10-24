@@ -20,7 +20,6 @@ public class AgenciaService {
     private final AgenciaRepository repo;
     private final CacheManager cacheManager;
 
-    // contador para "renovar" cache a cada 10 cadastros
     private final AtomicInteger insertCounter = new AtomicInteger(0);
 
     public AgenciaService(AgenciaRepository repo, CacheManager cacheManager) {
@@ -33,7 +32,6 @@ public class AgenciaService {
         Agencia ag = new Agencia(req.getPosX(), req.getPosY());
         ag = repo.save(ag);
 
-        // limpa cache somente a cada 10 inserções
         int curr = insertCounter.incrementAndGet();
         if (curr % 10 == 0) {
             var cache = cacheManager.getCache("agencias");
@@ -42,7 +40,6 @@ public class AgenciaService {
         return ag.getId();
     }
 
-    /** Lista de agências com cache de 5 min (ver CacheConfig). */
     @Cacheable("agencias")
     public List<Agencia> listaAgenciasComCache() {
         return repo.findAll();

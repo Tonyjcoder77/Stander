@@ -7,18 +7,14 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import java.util.concurrent.TimeUnit;
 
-//import java.util.concurrent.TimeUnit;
-//import java.util.concurrent.*;
-//import java.time.Duration.*;
-
 @Configuration
 public class CacheConfig {
 
     @Bean
     public Caffeine<Object, Object> caffeineConfig() {
         return Caffeine.newBuilder()
-                .maximumSize(10_000);
-               // .expireAfterWrite(5, TimeUnit.MINUTES);
+                .maximumSize(10_000)
+                .expireAfterWrite(5, TimeUnit.MINUTES);
     }
 
     @Bean

@@ -1,6 +1,5 @@
 package br.com.osa.stander.dto;
 
-//import jakarta.validation.constraints.NotNull;
 import org.antlr.v4.runtime.misc.NotNull;
 
 public class AgenciaRequest {

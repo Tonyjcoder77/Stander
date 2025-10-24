@@ -1,4 +1,6 @@
-INSERT INTO agencia (posx, posy, created_at) VALUES (10, -5, CURRENT_TIMESTAMP);
-INSERT INTO agencia (posx, posy, created_at) VALUES (-2, 2, CURRENT_TIMESTAMP);
-INSERT INTO agencia (posx, posy, created_at) VALUES (10, 4, CURRENT_TIMESTAMP);
-INSERT INTO agencia (posx, posy, created_at) VALUES (10, -7, CURRENT_TIMESTAMP);
+/*
+INSERT INTO agencia (posx, posy, created_at) VALUES (12, 21, CURRENT_TIMESTAMP);
+INSERT INTO agencia (posx, posy, created_at) VALUES (18, 17, CURRENT_TIMESTAMP);
+INSERT INTO agencia (posx, posy, created_at) VALUES (7, -31, CURRENT_TIMESTAMP);
+INSERT INTO agencia (posx, posy, created_at) VALUES (25, -1, CURRENT_TIMESTAMP);
+*/

@@ -20,7 +20,6 @@ public class DesafioController {
         this.service = service;
     }
 
-    /** POST /desafio/cadastrar */
     @PostMapping("/cadastrar")
     @ResponseStatus(HttpStatus.CREATED)
     public String cadastrar(@Valid @RequestBody AgenciaRequest body) {
@@ -28,7 +27,6 @@ public class DesafioController {
         return "{\"id\":" + id + "}";
     }
 
-    /** GET /desafio/distancia?posX=10&posY=5 */
     @GetMapping("/distancia")
     public List<DistanceResponse> distancia(@RequestParam int posX, @RequestParam int posY) {
         return service.calcularDistanciasOrdenadas(posX, posY);
